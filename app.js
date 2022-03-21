@@ -99,4 +99,19 @@ function saveLocalTodos(todo) {
   }
   
   
- 
+  function removeLocalTodos(todo) {
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+      todos = [];
+    } else {
+      todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    const todoIndex = todo.children[0].innerText;
+    //Checking the big array from what position (splice :from indexOf , second argument how many 1) one specefic element
+    todos.splice(todos.indexOf(todoIndex), 1);
+    
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+
+
+  
