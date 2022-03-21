@@ -14,7 +14,7 @@ todoButton.addEventListener("click", addTodo);
 function addTodo(e) {
     //Prevent natural behaviour
     e.preventDefault();
-    console.log('hello');
+    //console.log('hello');
     //Create todo div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
@@ -27,7 +27,7 @@ function addTodo(e) {
     // //
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
-    // todoInput.value = "";
+    todoInput.value = "";
     //Create Completed Button
     const completedButton = document.createElement("button");
     completedButton.innerHTML = `<i class="fas fa-check"></i>`;
